@@ -2,9 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon main.js"
+    "start": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,15 @@
   "description": "",
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.16.4"
+    "mongoose": "^8.16.4",
+    "mongoose-aggregate-paginate-v2": "^1.1.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
   }
 }
