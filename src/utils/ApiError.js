@@ -1,4 +1,4 @@
-class ApiError extends error{
+class ApiError extends Error{
     constructor(statusCode,message="Something went wrong",errors=[],stack="")
     {
         super(message) //by default it will be "something went wrong" message to change value we super(message)"
@@ -18,3 +18,4 @@ class ApiError extends error{
 }
 
 export {ApiError}
+ 
