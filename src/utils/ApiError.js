@@ -2,7 +2,7 @@ class ApiError extends Error{
     constructor(statusCode,message="Something went wrong",errors=[],stack="")
     {
         super(message) //by default it will be "something went wrong" message to change value we super(message)"
-        this.statusCode = statusCode
+        this.statusCode = statusCode,
         this.data=null,
         this.message=message,
         this.success=false,
